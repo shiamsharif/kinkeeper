@@ -1,0 +1,218 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f7fa;
+  --foreground: #1f2937;
+  --green: #1f513f;
+  --muted: #65748b;
+  --line: #dfe5ea;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Inter", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.page-shell {
+  width: min(100% - 2rem, 1020px);
+  margin-inline: auto;
+}
+
+.wide-shell {
+  width: min(100% - 2rem, 1140px);
+  margin-inline: auto;
+}
+
+.kk-card {
+  border: 1px solid #e3e8ee;
+  border-radius: 7px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.nav-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 4px;
+  padding: 0 14px;
+  color: #64748b;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition:
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.nav-link-active {
+  background: var(--green);
+  color: white;
+}
+
+.kk-icon {
+  display: inline-flex;
+  width: 1.1em;
+  justify-content: center;
+  font-size: 1.05em;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border-radius: 4px;
+  padding: 0.65rem 1rem;
+  font-weight: 800;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+.primary-button {
+  background: var(--green);
+  color: white;
+}
+
+.primary-button:hover {
+  background: #183f31;
+}
+
+.secondary-button {
+  border: 1px solid #d8dee6;
+  background: #fff;
+  color: #1f2937;
+}
+
+.secondary-button:hover {
+  background: #f8fafc;
+}
+
+.tag {
+  border-radius: 999px;
+  background: #c9f7d8;
+  padding: 0.28rem 0.62rem;
+  color: #226247;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.status-badge {
+  border-radius: 999px;
+  padding: 0.32rem 0.68rem;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.section-title {
+  color: #1f2937;
+  font-size: clamp(2.4rem, 4vw, 3.75rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.field {
+  min-height: 48px;
+  border: 1px solid #dfe5ea;
+  border-radius: 6px;
+  background: #fff;
+  padding: 0.8rem 1rem;
+  color: #65748b;
+  font-weight: 700;
+  outline: none;
+}
+
+.field:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(31, 81, 63, 0.12);
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 999px;
+  color: white;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  box-shadow: inset 0 -18px 32px rgba(0, 0, 0, 0.16);
+}
+
+.avatar-lg {
+  height: 72px;
+  width: 72px;
+  font-size: 1.35rem;
+}
+
+.avatar-xl {
+  height: 78px;
+  width: 78px;
+  font-size: 1.45rem;
+}
+
+.avatar-a {
+  background: radial-gradient(circle at 45% 20%, #ffd7b3, #d03055 50%, #5a122a);
+}
+
+.avatar-b {
+  background: radial-gradient(circle at 50% 20%, #efe1ce, #65615c 48%, #222);
+}
+
+.avatar-c {
+  background: radial-gradient(circle at 50% 20%, #8fb4ff, #6b62ce 54%, #131b55);
+}
+
+.avatar-d {
+  background: radial-gradient(circle at 50% 15%, #f0c8a3, #b2c7d6 52%, #425266);
+}
+
+.avatar-e {
+  background: radial-gradient(circle at 45% 15%, #e7c8bd, #3b2d35 52%, #141419);
+}
+
+.avatar-f {
+  background: radial-gradient(circle at 45% 25%, #f2d7a7, #d4d1bd 56%, #5f685d);
+}
+
+.avatar-g {
+  background: radial-gradient(circle at 55% 20%, #f3b78e, #c97955 52%, #2f2c2b);
+}
+
+.avatar-h {
+  background: radial-gradient(circle at 50% 20%, #d5e9f0, #4b7f91 52%, #293a45);
+}
+
+.avatar-i {
+  background: radial-gradient(circle at 50% 20%, #f4cf9d, #7b6026 54%, #2f2515);
+}
+
+.avatar-j {
+  background: radial-gradient(circle at 45% 20%, #f0d6cf, #889fb2 52%, #233345);
+}
