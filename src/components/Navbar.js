@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <header className="border-b border-[#dfe5ea] bg-white">
-      <nav className="mx-auto flex h-[70px] max-w-[1460px] items-center justify-between px-6 md:px-20">
+      <nav className="mx-auto flex h-17.5 max-w-365 items-center justify-between px-6 md:px-20">
         <Brand />
         <div className="flex items-center gap-2">
           {links
