@@ -97,7 +97,7 @@ export default function FriendDetailClient({ friend }) {
                   onClick={() => addInteraction(friend, action.type)}
                   type="button"
                 >
-                  <Icon name={action.icon} className="mb-2 text-3xl" />
+                  <Icon name={action.icon} className="mb-2 h-8 w-8" />
                   {action.type}
                 </button>
               ))}
