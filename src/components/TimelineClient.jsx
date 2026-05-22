@@ -25,7 +25,7 @@ export default function TimelineClient() {
       <h1 className="section-title">Timeline</h1>
 
       <select
-        className="field mt-8 w-full max-w-[310px]"
+        className="field mt-8 w-full max-w-77.5"
         onChange={(event) => setType(event.target.value)}
         value={type}
       >
@@ -40,7 +40,7 @@ export default function TimelineClient() {
       <section className="mt-5 space-y-5">
         {entries.map((entry) => (
           <article
-            className="kk-card flex min-h-[72px] items-center gap-4 px-4 py-3"
+            className="kk-card flex min-h-18 items-center gap-4 px-4 py-3"
             key={entry.id}
           >
             <span className="w-10 text-3xl leading-none">
