@@ -1,3 +1,11 @@
+import Image from "next/image";
+
+const socialLinks = [
+  { label: "Instagram", icon: "/assets/instagram.png" },
+  { label: "Facebook", icon: "/assets/facebook.png" },
+  { label: "X", icon: "/assets/twitter.png" },
+];
+
 export default function Footer() {
   return (
     <footer className="mt-20 bg-[#1f513f] text-white">
@@ -11,13 +19,13 @@ export default function Footer() {
         </p>
 
         <h3 className="mt-7 text-xl font-bold">Social Links</h3>
-        <div className="mt-4 flex justify-center gap-3">
-          {["instagram", "facebook", "x"].map((label) => (
+        <div className="mt-5 flex justify-center gap-6">
+          {socialLinks.map((social) => (
             <span
-              className="grid h-10 w-10 place-items-center rounded-full bg-white text-lg font-black text-[#1f2937]"
-              key={label}
+              className="grid h-20 w-20 place-items-center rounded-full bg-white"
+              key={social.label}
             >
-              {label === "instagram" ? "◉" : label === "facebook" ? "f" : "𝕏"}
+              <Image src={social.icon} alt={social.label} width={38} height={38} />
             </span>
           ))}
         </div>
