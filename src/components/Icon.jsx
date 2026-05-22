@@ -61,6 +61,13 @@ const iconPaths = {
       <path d="m14.5 10 5-2.5v9l-5-2.5" />
     </>
   ),
+  menu: (
+    <>
+      <path d="M4 7h16" />
+      <path d="M4 12h16" />
+      <path d="M4 17h16" />
+    </>
+  ),
 };
 
 export default function Icon({ name, className = "" }) {
