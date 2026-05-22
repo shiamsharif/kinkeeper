@@ -19,13 +19,13 @@ export default function Footer() {
         </p>
 
         <h3 className="mt-7 text-xl font-bold">Social Links</h3>
-        <div className="mt-5 flex justify-center gap-6">
+        <div className="mt-4 flex justify-center gap-3">
           {socialLinks.map((social) => (
             <span
-              className="grid h-20 w-20 place-items-center rounded-full bg-white"
+              className="grid h-10 w-10 place-items-center rounded-full bg-white"
               key={social.label}
             >
-              <Image src={social.icon} alt={social.label} width={38} height={38} />
+              <Image src={social.icon} alt={social.label} width={30} height={30} />
             </span>
           ))}
         </div>
