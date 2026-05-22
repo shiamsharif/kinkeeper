@@ -6,7 +6,7 @@ import Brand from "./Brand";
 import Icon from "./Icon";
 
 const links = [
-  { href: "/", label: "Home", icon: "home", homeOnly: true },
+  { href: "/", label: "Home", icon: "home" },
   { href: "/timeline", label: "Timeline", icon: "timeline" },
   { href: "/stats", label: "Stats", icon: "stats" },
 ];
@@ -19,25 +19,23 @@ export default function Navbar() {
       <nav className="mx-auto flex h-17.5 max-w-365 items-center justify-between px-6 md:px-20">
         <Brand />
         <div className="flex items-center gap-2">
-          {links
-            .filter((link) => pathname === "/" || !link.homeOnly)
-            .map((link) => {
-              const active =
-                link.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(link.href);
+          {links.map((link) => {
+            const active =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href);
 
-              return (
-                <Link
-                  className={`nav-link ${active ? "nav-link-active" : ""}`}
-                  href={link.href}
-                  key={link.href}
-                >
-                  <Icon name={link.icon} />
-                  {link.label}
-                </Link>
-              );
-            })}
+            return (
+              <Link
+                className={`nav-link ${active ? "nav-link-active" : ""}`}
+                href={link.href}
+                key={link.href}
+              >
+                <Icon name={link.icon} />
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
       </nav>
     </header>
